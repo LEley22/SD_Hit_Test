@@ -403,9 +403,13 @@ return worldPhysical;
 
 void detectorConstruction::ConstructSDandField()
 {
-    SenDetClass *senDet  = new SenDetClass("SensitiveDetector");
-    detLogic -> SetSensitiveDetector(senDet);
 
-  SenDetClass* senWindow = new SenDetClass("SenWindow")
-  WindowLogic -> SetSensitiveDetector(senWindow)
+  auto DetSD= new senDetClass("DetSD", "DetHitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(DetSD);
+  SetSensitiveDetector("detLogic", detSD);
+
+  auto FilterSD = new senDetClass("FilterSD", "FilterHitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(FilterSD);
+  SetSensitiveDetector("WindowLogic",FilterSD);
+
 }
