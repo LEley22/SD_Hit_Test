@@ -5,10 +5,6 @@
 #include "G4SDManager.hh"
 #include "G4ios.hh"
 
-{
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
 senDet::senDet(G4String name)
 :G4VSensitiveDetector(name),
 collectionID(-1)
@@ -16,7 +12,6 @@ collectionID(-1)
 collectionName.insert(“DetectorHits");
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void senDet::Initialize(G4HCofThisEvent* hce)
 {
@@ -26,7 +21,6 @@ void senDet::Initialize(G4HCofThisEvent* hce)
   hce->AddHitsCollection(collectionID,hitsCollection); 
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 G4bool senDet::ProcessHits(G4Step* step,
                                      G4TouchableHistory*)
@@ -38,11 +32,7 @@ G4bool senDet::ProcessHits(G4Step* step,
 return true; 
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void senDet::EndOfEvent(G4HCofThisEvent*)
 {}
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-}
