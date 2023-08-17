@@ -3,7 +3,7 @@
 
 #include "G4VSensitiveDetector.hh"
 
-#include "MyHits.hh"
+#include "MyHit.hh"
 
 #include <vector>
 
