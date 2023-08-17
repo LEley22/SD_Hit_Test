@@ -9,7 +9,7 @@
 #include "G4PVPlacement.hh"
 #include "G4NistManager.hh"
 #include "G4SDManager.hh"
-#include "SenDet.hh"
+#include "senDet.hh"
 #include "G4VisAttributes.hh"
 #include "G4UImanager.hh"
 #include "G4GenericMessenger.hh"
