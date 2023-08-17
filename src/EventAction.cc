@@ -10,8 +10,6 @@
 #include "Randomize.hh"
 #include <iomanip>
 
-{
-
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 G4THitsMap<G4double>*
@@ -47,14 +45,11 @@ if(HCE)
 { myDetColl = (MyHitsCollection*)(HCE->GetHC(CHCID)); }
 if(myDetColl) {
 int n_hit = myDetColl->entries();
-  
-G4cout<<“My detector has ”<<n_hit<<" hits."<<G4endl;
+
   
 for(int i1=0;i1<n_hit;i1++) {
 MyHit* aHit = (*myDetColl)[i1];
 aHit->Print();
 }
 }
-}
-
 }
