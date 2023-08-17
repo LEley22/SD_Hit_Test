@@ -2,7 +2,7 @@
 #define detHit_h 1
 
 #include "G4VHit.hh"
-#include “G4THitsCollection.hh”
+#include "G4THitsCollection.hh"
 #include "G4Allocator.hh"
 
 class MyHit : public G4VHit
